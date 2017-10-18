@@ -1,0 +1,14 @@
+{
+    "version": "2.0.0",
+    "tasks": [{
+        "taskName": "mingw",
+        "type": "shell",
+        "command": "call \"${workspaceRoot}/.vscode/build.bat\"",
+        "args": ["mingw_build", "main.mingw"],
+        // "args": ["mingw_build"],
+        "group": {
+            "kind": "build",
+            "isDefault": true
+        }
+    }]
+}
