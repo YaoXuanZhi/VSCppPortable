@@ -1,4 +1,4 @@
-﻿:::::::::::::::: Visual Studio Code Portable Launcher Version 1.0 BY 耀轩之 ::::::::::::::::
+:::::::::::::::: Visual Studio Code Portable Launcher Version 1.0 BY ҫ��֮ ::::::::::::::::
 @echo off
 call:set_absolute_path USERPROFILE .\RunDir\User
 call:set_absolute_path APPDATA .\RunDir\User\AppData\Roaming

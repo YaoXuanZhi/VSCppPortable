@@ -28,14 +28,20 @@
 ```
 
 ### 使用说明
-直接将Compiler文件夹下的压缩包MinGW.rar、VC 6.0 MBuild.rar、VS 2010 MBuild.rar解压到所在文件夹中（PS：直接选中压缩包右键执行 **解压到当前文件夹** 命令即可）
+直接将Compiler文件夹下的压缩包MinGW.rar、VC 6.0 MBuild.rar、VS 2010 MBuild.rar解压到所在文件夹中（PS：直接选中压缩包右键执行 **解压到当前文件夹** 命令即可），在运行VSCode的时候，点击RunCode.bat来执行Code.exe即可。
 
 ##### 注意事项
- - 1.GDB调试的源码的所在路径不能包含非ASCII字符，但是VSDBG是支持的，如下图所示：
+ - 1.VSCode的版本最好是VSCode 1.10.0以上，以是否在工具栏上有**任务(T)**为准，如下图所示：
 
- - 2.目前VC 6.0是支持编译但是并不支持调试，这个是由vs-capptools插件提供的vsdbg决定的，本人对此无能为力，如下图所示：
+ - 2.需要将终端的执行目标设为cmd.exe，这个是与task.json里面的**"type": "shell"**是关联起来的，如下所示：
 
- - 3.在使用MSVC来调试的时候，可能会存在被调试的源文件和想要调试的文件同时存在的情况，这个是vsdbg的一个bug，vsdbg调试的源文件的路径的字母必须是小写的，如果当前被调试的源文件的路径包含了字母非全部小写的情形，那么它就会额外打开一个同名文件并调试，区别仅仅在于路径上的字母全为小写，如下图所示：
+ - 3.点击RunCode.bat来运行这个VSCode主程序，否则上述设置将会无效
+
+ - 4.GDB调试的源码的所在路径不能包含非ASCII字符，但是VSDBG是支持的，如下图所示：
+
+ - 6.目前VC 6.0是支持编译但是并不支持调试，这个是由vs-capptools插件提供的vsdbg决定的，本人对此无能为力，如下图所示：
+
+ - 7.在使用MSVC来调试的时候，可能会存在被调试的源文件和想要调试的文件同时存在的情况，这个是vsdbg的一个bug，vsdbg调试的源文件的路径的字母必须是小写的，如果当前被调试的源文件的路径包含了字母非全部小写的情形，那么它就会额外打开一个同名文件并调试，区别仅仅在于路径上的字母全为小写，如下图所示：
 
  - [【VSCode】Windows下VSCode便携式c/c++环境【更新】](http://blog.csdn.net/c_duoduo/article/details/52083494)
  - [【VSCode】【VSCode】Windows下VSCode编译调试c/c++【更新】](http://blog.csdn.net/c_duoduo/article/details/51615381)
