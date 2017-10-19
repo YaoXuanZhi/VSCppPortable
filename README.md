@@ -33,9 +33,15 @@
 ##### 注意事项
  - 1.VSCode的版本最好是VSCode 1.10.0以上，以是否在工具栏上有**任务(T)**为准，如下图所示：
 
- - 2.需要将终端的执行目标设为cmd.exe，这个是与task.json里面的**"type": "shell"**是关联起来的，如下所示：
+ ![image](https://user-images.githubusercontent.com/14124918/31769090-a991e9d8-b504-11e7-8c71-1daa504ab33d.png)
+
+ - 2.需要将终端类型设为cmd.exe，这个是与task.json里面的**"type": "shell"**是相匹配的，如下所示：
+
+![image](https://user-images.githubusercontent.com/14124918/31769252-7639d1f8-b505-11e7-99cd-6f63b2acd8d0.png)
 
  - 3.点击RunCode.bat来运行这个VSCode主程序，否则上述设置将会无效
+
+ ![snipaste_20171019_194255](https://user-images.githubusercontent.com/14124918/31770955-c29c715c-b50c-11e7-9031-cbb6900061fe.png)
 
  - 4.GDB调试的源码的所在路径不能包含非ASCII字符，但是VSDBG是支持的，如下图所示：
 
