@@ -4,6 +4,8 @@ set USERPROFILE=%~dp0RunDir\User
 set APPDATA=%~dp0RunDir\User\AppData\Roaming
 set CompilerPath=%~dp0RunDir\Compiler
 
+set path=%path%;%CompilerPath%
+
 ::进入当前bat的所在盘符
 %~d0
 
