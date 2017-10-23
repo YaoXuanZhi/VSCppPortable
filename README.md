@@ -53,12 +53,10 @@
  
  - 5.目前VC 6.0是支持编译但是并不支持调试，这个是由 **ms-vscode.cpptools** 插件提供的vsdbg决定的。
 
+ - 6.建议使用Windows系统自Vista开始提供的mklink来创建软链接，将此便捷包目录内的.vscode文件夹链接到`%USERPROFILE%\.vscode`上，这样可以节省空间，此时直接运行Code.exe时所加载的插件就在便捷包目录内，以后系统重装、Copy给其它小伙伴时，只需要将此整个文件夹打包分发即可。
+
 ##### 参考资料
  - [【VSCode】Windows下VSCode便携式c/c++环境【更新】](http://blog.csdn.net/c_duoduo/article/details/52083494)
  - [【VSCode】【VSCode】Windows下VSCode编译调试c/c++【更新】](http://blog.csdn.net/c_duoduo/article/details/51615381)
  - [VSCode实现C++代码提示、语法高亮、编译和调试](http://m.blog.csdn.net/caoshiying/article/details/78122073)
 
- 为此项目创建三个分支，具体功能如下所示：
-  - master：侧重将C/C++的编译环境可以快速在Vim和VSCode等高级文本编辑器上部署
-  - vscode：侧重在VSCode之中快速部署一个C/C++的开发环境，方便开发者开箱即用
-  - vim：其实主要集中在GVim上，侧重在Vim之中快速部署一个C/C++的开发环境，方便开发者开箱即用
