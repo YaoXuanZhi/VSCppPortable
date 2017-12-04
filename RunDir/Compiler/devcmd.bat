@@ -1,11 +1,24 @@
 @echo off
 
+@if [%1] == [/?] goto useinfo
 @if [%1] == [mingw] goto mingw
 @if [%1] == [msvc6.0] goto msvc6.0
 @if [%1] == [msvc10.0] goto msvc10.0
 @if [%1] == [mingw_build] goto mingw_build
 @if [%1] == [msvc6.0_build] goto msvc6.0_build
 @if [%1] == [msvc10.0_build] goto msvc10.0_build
+
+:useinfo
+REM @echo 打印使用说明
+@echo [-------------------使用说明----------------------
+@echo "mingw            -- 进入mingw编译环境"
+@echo "msvc6.0          -- 进入msvc6.0编译环境"
+@echo "msvc10.0         -- 进入msvc10.0编译环境"
+@echo "mingw_build      -- 直接使用mingw编译makefile"
+@echo "msvc6.0_build    -- 直接使用msvc6.0编译makefile"
+@echo "msvc10.0_build   -- 直接使用msvc10.0编译makefile"
+@echo ---------------------使用说明---------------------]
+@goto end
 
 :mingw
 REM @echo 进入到MinGW的编译环境
