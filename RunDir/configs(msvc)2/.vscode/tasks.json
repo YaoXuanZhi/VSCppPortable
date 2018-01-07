@@ -1,0 +1,13 @@
+{
+    "version": "2.0.0",
+    "tasks": [{
+        "taskName": "msvc",
+        "type": "shell",
+        "command": "call \"${workspaceRoot}/.vscode/build.bat\"",
+        "args": ["makefile"],
+        "group": {
+            "kind": "build",
+            "isDefault": true
+        }
+    }]
+}
