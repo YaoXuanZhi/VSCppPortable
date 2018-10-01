@@ -13,7 +13,7 @@
 @set "WinSDKPath=%WinSDKPath:"=%"
 
 ::设置环境变量，存在空格的路径需要用双引号包裹
-@set PATH="%VCPath%\BIN";"%WinSDKPath%\BIN";"%windir%\SYSTEM";"%PATH%"
+@set PATH="%VCPath%\BIN";"%WinSDKPath%\BIN";"%windir%\SYSTEM";%PATH%
 
 ::设置待搜索的头文件路径，路径不需要双引号
 @set INCLUDE=%VCPath%\ATL\INCLUDE;%VCPath%\INCLUDE;%VCPath%\MFC\INCLUDE;%WinSDKPath%\include;%INCLUDE%
