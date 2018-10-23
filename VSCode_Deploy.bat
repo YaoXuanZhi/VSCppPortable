@@ -7,8 +7,9 @@ SetLocal EnableDelayedExpansion
 
 set /p vscodedir=输入VSCode的安装目录，如"D:\xxx\VSCode": 
 
+set "vscodedir=%vscodedir:"=%"
+
 call %~dp0VSCode_MdLink.bat "%vscodedir%"
 call %~dp0RegCode.bat "%vscodedir%"
 
-set "vscodedir=%vscodedir:"=%"
 copy %~dp0RunCode.bat "%vscodedir%\RunCode.bat"

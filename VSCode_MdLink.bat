@@ -4,12 +4,13 @@ Md "%WinDir%\System32\test_permissions" 2>NUL||(Echo 请使用右键管理员身份运行&&P
 Rd "%WinDir%\System32\test_permissions" 2>NUL
 SetLocal EnableDelayedExpansion
 
-mklink /j "%USERPROFILE%\.vscode" "%~dp0RunDir\User\.vscode"
-mklink /j "%USERPROFILE%\AppData\Roaming\Code" "%~dp0RunDir\User\AppData\Roaming\Code"
+if not exist "%USERPROFILE%\.vscode" (mklink /j "%USERPROFILE%\.vscode" "%~dp0RunDir\User\.vscode")
+if not exist "%USERPROFILE%\AppData\Roaming\Code" (mklink /j "%USERPROFILE%\AppData\Roaming\Code" "%~dp0RunDir\User\AppData\Roaming\Code")
 
-set vscodedir=%1\
+set vscodedir=%1
+set tempdir=%vscodedir%\
+set "tempdir=%tempdir:"=%"
 
-if not [%vscodedir%]==[\] (
-    set "vscodedir=%vscodedir:"=%"
-    mklink /j "%vscodedir%RunDir" "%~dp0RunDir"
+if not [%vscodedir%] == [] (
+    if not exist "%tempdir%RunDir" (mklink /j "%tempdir%RunDir" "%~dp0RunDir")
 )
