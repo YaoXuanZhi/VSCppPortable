@@ -15,11 +15,11 @@ if [%vscodedir%]==[\] (
 )
 
 ::设置右键菜单项的名称
-@set desc="Open with C&ode - OSS"
+@set desc="Open with C&ode - OSS By Mine"
 ::设置搭建编译环境的BAT
 @set runbat="RunCode.bat"
 ::设置子路径名称
-@set subname="VSCode"
+@set subname="VSCodeEx"
 ::去掉双引号，主要是为了兼容包含了空格的文件名或路径
 @set "runbat=%runbat:"=%"
 @set "subname=%subname:"=%"
