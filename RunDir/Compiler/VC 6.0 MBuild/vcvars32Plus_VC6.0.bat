@@ -21,5 +21,8 @@
 ::设置附加依赖目录，存在空格的路径需要用双引号包裹
 @set LIB="%VCPath%\LIB";"%VCPath%\MFC\LIB";"%WinSDKPath%\Lib";%LIB%
 
+@set "INCLUDE=%INCLUDE:\=/%"
+@set "LIB=%LIB:\=/%"
+
 ::@echo 已经搭建好Microsoft Visual C++ 工具的使用环境了o(∩_∩)o
 %windir%\SYSTEM32\cmd.exe

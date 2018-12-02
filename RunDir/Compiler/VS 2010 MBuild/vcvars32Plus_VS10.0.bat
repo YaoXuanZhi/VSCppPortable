@@ -6,10 +6,10 @@
 
 ::设置Windows SDK的所在路径
 ::@set WinSDKPath="C:\Users\John\Videos\VS 2010 Console\Windows SDK\v7.1A"
-@set WinSDKPath="%~dp0\Windows SDK\v7.1A"
+@set WinSDKPath="%~dp0Windows SDK\v7.1A"
 
 ::设置OpenGL的所在路径
-@set GLPath="%~dp0\OpenGL"
+@set GLPath="%~dp0OpenGL"
 
 ::将路径中可能存在的双引号去掉
 @set "VSVCPath=%VSVCPath:"=%"
@@ -24,6 +24,9 @@
 
 ::设置附加依赖目录，存在空格的路径需要用双引号包裹
 @set LIB="%GLPath%\LIB";"%VSVCPath%\LIB";"%VSVCPath%\atlmfc\LIB";"%WinSDKPath%\Lib";%LIB%
+
+@set "INCLUDE=%INCLUDE:\=/%"
+@set "LIB=%LIB:\=/%"
 
 ::@echo 已经搭建好Microsoft Visual C++ 工具的使用环境了o(∩_∩)o
 %windir%\SYSTEM32\cmd.exe
